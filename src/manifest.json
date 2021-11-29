@@ -1,0 +1,15 @@
+{
+  "name": "Custom Scrollbars",
+  "description": "A browser extension that allows you to customize the scrollbar appearance.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
