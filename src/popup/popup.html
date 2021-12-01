@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Custom Scrollbars</title>
+    <link rel="stylesheet" href="../lib/browser_style.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="browser-style">
+    <form name="manager">
+        <section class="panel-section has-help">
+            <p>Scrollbar</p>
+        </section>
+
+        <section id="profile-selector-container" class="panel-section help-row">
+            <div>
+                <select id="profile" name="profile"></select>
+            </div>
+        </section>
+
+        <section class="panel-section help-row has-help hide">
+            <div id="profile-inherit" class="message-bar general"></div>
+        </section>
+
+        <div class="panel-section-separator"></div>
+
+        <section class="panel-section has-help">
+            <p>Scrollbar width</p>
+            <span id="detail-width"></span>
+        </section>
+
+        <section class="panel-section has-help help-row browser">
+            <p>Scrollbar buttons</p>
+            <span id="detail-buttons"></span>
+        </section>
+
+        <section class="panel-section has-help help-row browser">
+            <p>Scrollbar roundness</p>
+            <span id="detail-thumbRadius"></span>
+        </section>
+
+        <section class="panel-section has-help help-row">
+            <p>Scrollbar thumb color</p>
+            <span id="detail-color-thumb" class="color-output"></span>
+        </section>
+
+        <section class="panel-section has-help help-row">
+            <p>Scrollbar track color</p>
+            <span id="detail-color-track" class="color-output"></span>
+        </section>
+
+        <section class="panel-section help-row">
+            <p>Allow websites to override</p>
+            <span id="detail-override"></span>
+        </section>
+
+        <div class="panel-section-separator"></div>
+
+        <section class="panel-section">
+            <div class="button-bar">
+                <button id="button-use" type="button" class="default icon">
+                    <div class="url-only">
+                        <img src="../images/globe.svg" alt="">
+                        <p>Use on this website</p>
+                    </div>
+                    <div class="local-file-only">
+                        <img src="../images/folder.svg" alt="">
+                        <p>Use for local files</p>
+                    </div>
+                </button>
+
+                <button id="button-setDefault" type="button" class="secondary icon" disabled>
+                    <div>
+                        <img src="../images/check.svg" alt="">
+                        <p>Set As Default</p>
+                    </div>
+                </button>
+
+                <button id="button-options" type="button" class="secondary icon">
+                    <div>
+                        <img src="../images/preferences.svg" alt="">
+                        <p>Options</p>
+                    </div>
+                </button>
+                <button id="button-feedback" type="button" class="secondary icon icon-only">
+                    <div>
+                        <img src="../images/feedback.svg" alt="">
+                        <p>Feedback</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section id="grantPermissionError" class="panel-section help-row hide">
+            <div class="message-bar error">
+                <p>To see information about the settings being used on the website, the add-on needs permission to access your browser tabs.</p>
+                <button id="grantPermission" type="button" class="default" >Grant Permission</button>
+            </div>
+        </section>
+    </form>
+
+    <script src="../defaults.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

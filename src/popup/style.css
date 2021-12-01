@@ -1,0 +1,113 @@
+body {
+    min-width: 500px;
+    width: 100%;
+}
+
+#profile {
+    appearance: none;
+    width: 100%;
+}
+
+.button-bar {
+    text-align: center;
+}
+
+.button-bar > button {
+    margin-bottom: 0.2rem;
+}
+
+.color-output {
+    border: 1px solid var(--border-color);
+    border-radius: 0.35rem;
+    height: 1em;
+    width: 5em;
+}
+
+.help-row {
+    color: var(--text-color) ;
+}
+
+.hide {
+    display: none ;
+}
+
+#grantPermissionError > .message-bar {
+    margin: auto;
+    max-width: 500px;
+    width: 80%;
+}
+
+#whatsnew {
+    cursor: pointer;
+    position: relative;
+}
+
+#whatsnew > div {
+    background: var(--primary-color-1);
+    border-radius: 1em;
+    height: 0.35em;
+    position: absolute;
+    right: -0.2em;
+    top: -0.2em;
+    width: 0.35em;
+}
+
+#whatsnew > img {
+    height: 1em;
+    width: 1em;
+}
+
+button.icon > div > img {
+    flex: 1;
+    height: 1em;
+    margin-right: 0.5em;
+    width: 1em;
+}
+
+button.icon > div {
+    align-items: center;
+    display: inline-flex;
+    width: max-content;
+}
+
+button.secondary.icon > div > img,
+img.icon-text-color {
+    filter: invert(2%) sepia(2%) saturate(2394%) hue-rotate(202deg) brightness(99%) contrast(95%);
+}
+
+button.default.icon > div > img {
+    filter: invert(100%);
+}
+
+body.local-file .url-only,
+body:not(.local-file) .local-file-only,
+body:not(.firefox) .firefox-only,
+body:not(.chromium) .browser {
+    display: none ;
+}
+
+button.icon-only {
+    min-width: 0 ;
+}
+
+button.icon-only img {
+    margin-right: 0 ;
+}
+
+button.icon-only span {
+    width: 0 ;
+    overflow: hidden ;
+    visibility: hidden ;
+    white-space: nowrap ;
+}
+
+@media (prefers-color-scheme: dark) {
+    button.secondary.icon > div > img,
+    img.icon-text-color {
+        filter: invert(94%) sepia(3%) saturate(44%) hue-rotate(197deg) brightness(104%) contrast(98%);
+    }
+
+    button.default.icon > div > img {
+        filter: invert(100%);
+    }
+}
