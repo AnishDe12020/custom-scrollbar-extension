@@ -3,13 +3,28 @@
   "description": "A browser extension that allows you to customize the scrollbar appearance.",
   "version": "1.0",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "Custom Scrollbars",
+    "default_popup": "popup/popup.html"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content-script.js"]
-    }
-  ]
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": false,
+    "open_in_tab": true
+  },
+
+  "background": {
+    "scripts": ["defaults.js", "generateCSS.js", "background.js"]
+  },
+
+  "web_accessible_resources": [
+    "images/components/light/*.svg",
+    "images/components/dark/*.svg"
+  ],
+
+  "permissions": ["storage", "<all_urls>"],
+
+  "optional_permissions": ["downloads"]
 }
