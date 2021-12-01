@@ -9,11 +9,7 @@
     "default_popup": "popup/popup.html"
   },
 
-  "options_ui": {
-    "page": "options/options.html",
-    "browser_style": false,
-    "open_in_tab": true
-  },
+
 
   "background": {
     "scripts": ["defaults.js", "generateCSS.js", "background.js"]
